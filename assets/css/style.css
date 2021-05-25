@@ -1,0 +1,331 @@
+@media only screen and (min-width: 375px) {
+
+    .container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .top-header,
+    .nav-togglers,
+    .footer-container,
+    .copyright {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 450px) {
+
+    .nav-content {
+        width: calc(70% - 2rem);
+    }
+
+    .container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .top-header,
+    .nav-togglers,
+    .footer-container,
+    .copyright {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 500px) {
+
+    .nav-content {
+        width: calc(65% - 2rem);
+    }
+
+    .container {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    .service-features-grid {
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+
+    .top-header,
+    .nav-togglers,
+    .footer-container,
+    .copyright {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 550px) {
+
+    .nav-content {
+        width: calc(60% - 2rem);
+    }
+
+    .container {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .top-header,
+    .nav-togglers {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .nav-content {
+        width: calc(55% - 2rem);
+    }
+
+    .container {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .new-arrivals-grid,
+    .share-fashion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .what-you-like {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media only screen and (min-width: 650px) {
+
+    .nav-content {
+        width: calc(50% - 2rem);
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    .nav-content {
+        width: calc(45% - 2rem);
+    }
+
+    .what-you-like {
+        width: 85%;
+    }
+
+    .footer-container,
+    .copyright {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .what-you-like-grid {
+        gap: 2%;
+    }
+
+    .what-you-like-btn.right {
+        right: 1%;
+    }
+
+    .what-you-like-btn.left {
+        left: 1%;
+    }
+
+    .what-you-like-card {
+        min-width: 49%;
+    }
+
+    .fashion-outfit {
+        grid-template-areas: "one two"
+                             "three three";
+        gap: 1.5rem;
+    }
+
+    .fashion-outfit-one {
+        grid-area: one;
+    }
+
+    .fashion-outfit-one,
+    .fashion-outfit-two {
+        height: 350px;
+    }
+
+    .fashion-outfit-two {
+        grid-area: two;
+    }
+
+    .fashion-outfit-three {
+        grid-area: three;
+        height: 250px;
+    }
+
+    .fashion-outfit-text-three {
+        top: 35%;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    .nav-togglers {
+        display: none;
+    }
+
+    .top-header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .top-header,
+    .nav-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .search-container {
+        width: calc(100% - 70%);
+        margin-left: 0;
+    }
+
+    .search-container,
+    .nav-content {
+        position: static;
+        transform: translateY(0);
+    }
+
+    .top-nav-link-icon {
+        margin-right: 3rem;
+    }
+
+    .nav-content-container {
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .nav-content-container,
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-content {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .nav-item:not(:last-child) {
+        margin: 0;
+    }
+
+    .nav-links {
+        place-content: center;
+        column-gap: 2.5rem;
+    }
+
+    .nav-link {
+        display: initial;
+    }
+
+    .new-arivals,
+    .what-you-like,
+    .fashion-outfit,
+    .service-features-grid,
+    .subscribe-to-news-letter {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .new-arrivals-grid,
+    .share-fashion-grid {
+        gap: 2rem;
+    }
+
+    .service-features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: .5rem;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .subscribe-to-news-letter {
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .new-arivals,
+    .what-you-like,
+    .fashion-outfit,
+    .share-fashion,
+    .service-features-grid {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .new-arrivals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .what-you-like-btn.right {
+        right: 5%;
+    }
+
+    .what-you-like-btn.left {
+        left: 5%;
+    }
+
+    .what-you-like-card {
+        min-width: 32%;
+    }
+
+    .share-fashion-grid,
+    .service-features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .footer-container {
+        display: grid;
+        margin-left: 3%;
+        margin-right: 3%;
+        grid-template-columns: repeat(4, 3fr) 5fr;
+    }
+
+    .subscribe-to-news-letter {
+        width: 100%;
+        margin-top: 0;
+    }
+
+}  

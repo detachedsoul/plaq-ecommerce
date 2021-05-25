@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('../fonts/Baloo 2.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Luckiest Guy';
+    src: url('../fonts/Luckiest Guy.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/Noto Sans.ttf') format('truetype');
+    font-display: swap;
+}
