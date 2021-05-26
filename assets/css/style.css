@@ -1,6 +1,12 @@
 @media only screen and (min-width: 375px) {
 
-    .container {
+    .slideshow-container {
+        border-radius: 1rem;
+    }
+
+    .container,
+    .slideshow-container,
+    .account-container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -21,7 +27,9 @@
         width: calc(70% - 2rem);
     }
 
-    .container {
+    .container,
+    .slideshow-container,
+    .account-container {
         margin-left: 2rem;
         margin-right: 2rem;
     }
@@ -42,7 +50,9 @@
         width: calc(65% - 2rem);
     }
 
-    .container {
+    .container,
+    .slideshow-container,
+    .account-container {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
     }
@@ -57,7 +67,8 @@
     .top-header,
     .nav-togglers,
     .footer-container,
-    .copyright {
+    .copyright,
+    .account-container {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
@@ -70,13 +81,16 @@
         width: calc(60% - 2rem);
     }
 
-    .container {
+    .container,
+    .slideshow-container,
+    .account-container {
         margin-left: 3rem;
         margin-right: 3rem;
     }
 
     .top-header,
-    .nav-togglers {
+    .nav-togglers,
+    .account-container {
         padding-left: 3rem;
         padding-right: 3rem;
     }
@@ -89,9 +103,12 @@
         width: calc(55% - 2rem);
     }
 
-    .container {
-        margin-left: 3%;
-        margin-right: 3%;
+    
+    .slideshow-container,
+    .what-you-like {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .new-arrivals-grid,
@@ -102,8 +119,11 @@
 
     .what-you-like {
         width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+    }
+
+    .account-container {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
     }
 
 }
@@ -112,6 +132,11 @@
 
     .nav-content {
         width: calc(50% - 2rem);
+    }
+
+    .account-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 
 }
@@ -127,7 +152,8 @@
     }
 
     .footer-container,
-    .copyright {
+    .copyright,
+    .account-container {
         padding-left: 5rem;
         padding-right: 5rem;
     }
@@ -149,7 +175,7 @@
     }
 
     .what-you-like-card {
-        min-width: 49%;
+        min-width: 48.4%;
     }
 
     .fashion-outfit {
@@ -182,7 +208,25 @@
 
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 800px) {
+
+    .account-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .account-header {
+        width: 50%;
+        margin: auto;
+    }
+
+    .account-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
     
     .nav-togglers {
         display: none;
@@ -253,7 +297,8 @@
     .what-you-like,
     .fashion-outfit,
     .service-features-grid,
-    .subscribe-to-news-letter {
+    .subscribe-to-news-letter,
+    .account-header {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -274,10 +319,55 @@
         flex-wrap: wrap;
     }
 
-    .subscribe-to-news-letter {
+    .subscribe-to-news-letter,
+    .slideshow-container {
         width: 80%;
         margin-top: 2rem;
     }
+
+    .copyright {
+        justify-content: space-between;
+    }
+
+    .account-header {
+        width: 30%;
+    }
+
+    .account-grid {
+        margin-top: 5rem;
+    }
+
+    .account-grid section:first-child {
+        border-right: 1px dotted #272727;
+        padding-right: 5rem;
+    }
+
+    .sign-up-grid {
+        grid-template-areas: "fullname username"
+                             "email password"
+                             "sign-up-btn sign-up-btn";
+    }
+
+    #fullname {
+        grid-area: fullname;
+    }
+
+    #username {
+        grid-area: username;
+    }
+
+    #email {
+        grid-area: email;
+    }
+
+    #password {
+        grid-area: password;
+    }
+
+    #sign-up-btn {
+        grid-area: sign-up-btn;
+    }
+
 
 
 }
@@ -288,7 +378,8 @@
     .what-you-like,
     .fashion-outfit,
     .share-fashion,
-    .service-features-grid {
+    .service-features-grid,
+    .account-grid {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -307,7 +398,7 @@
     }
 
     .what-you-like-card {
-        min-width: 32%;
+        min-width: 31.5%;
     }
 
     .share-fashion-grid,
@@ -320,7 +411,7 @@
         display: grid;
         margin-left: 3%;
         margin-right: 3%;
-        grid-template-columns: repeat(4, 3fr) 5fr;
+        grid-template-columns: repeat(4, 2fr) 5fr;
     }
 
     .subscribe-to-news-letter {

@@ -3,6 +3,7 @@
     --black: #000000;
     --white: #ffffff;
     --light-grey: #fAfAfA;
+    --blue: #00ABE7;
     --luckiest-guy: 'Luckiest Guy';
     --noto-sans: 'Noto Sans';
     --baloo-2: 'Baloo 2';
@@ -43,7 +44,8 @@ header {
 }
 
 header a:not(.active):not(.search-toggle):hover,
-.footer-links:hover {
+.footer-links:hover,
+.top-nav-active {
     color: #fe4066;
 }
 
@@ -59,7 +61,6 @@ a,
 
 p {
     padding-top: .5rem;
-    word-break: break-all;
 }
 
 img {
@@ -90,6 +91,7 @@ button {
 
 .logo {
     width: 70px;
+    height: 60px;
 }
 
 .btn {
@@ -159,6 +161,14 @@ button {
     text-align: center;
 }
 
+.link {
+    color: var(--blue);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
 .border-7 {
     border-radius: .7rem;
 }
@@ -173,7 +183,8 @@ button {
     border-radius: 50%;
 }
 
-.bg-white {
+.bg-white,
+.slide-indicator.active {
     background-color: var(--white);
     color: var(--main-black);
 }
@@ -197,11 +208,6 @@ button {
     color: var(--white);
 }
 
-.transparent-white-bg {
-    background-color: var(--transparent-white);
-    color: var(--main-black);
-}
-
 .old-price {
     color: #3e4e50;
     text-decoration: line-through;
@@ -211,12 +217,13 @@ button {
 .sub-header {
     padding-top: .1rem;
     font-size: .9rem;
-    font-weight: 700;
+    font-weight: 550;
 }
 
 .active,
 .submit-btn,
-.what-you-like-grid::-webkit-scrollbar-thumb {
+.what-you-like-grid::-webkit-scrollbar-thumb,
+.slide-indicator {
     background-color: #fe4066;
 }
 
@@ -229,7 +236,7 @@ button {
 .search-container {
     width: 90%;
     left: 6%;
-    top: 5.7rem;
+    top: 6rem;
     transform: translateY(-10rem);
     z-index: 1024;
 }
@@ -255,7 +262,8 @@ button {
     font-size: 1.2rem;
 }
 
-.top-nav-link-icon {
+.top-nav-link-icon,
+.slide-indicator:not(:last-child) {
     margin-right: 1rem;
 }
 
@@ -277,7 +285,8 @@ button {
 .nav-link,
 img,
 .service-feature-icon,
-.footer-links {
+.footer-links,
+label {
     display: block;
 }
 
@@ -315,7 +324,7 @@ img,
 .nav-content {
     width: calc(80% - 2rem);
     height: 100vh;
-    top: 7.6rem;
+    top: 8rem;
     transform-origin: 0 0;
     transform: translateX(-100%);
 }
@@ -344,6 +353,31 @@ img,
     margin-right: .7rem;
 }
 
+.slideshow-container {
+    background-color: #e6f8f3;
+    height: calc(100vh - 40vh);
+    overflow: hidden;
+}
+
+.slideshow-content {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.slideshow-image {
+    height: 100%;
+}
+
+.slide-indicator-container {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(100vh - 80vh));
+}
+
+.slide-indicator {
+    width: 20px;
+    height: 20px;
+}
 
 .container {
     margin: 3rem 1rem 6rem 1rem;
@@ -351,7 +385,11 @@ img,
 
 .new-arrivals-grid,
 .what-you-like-card,
-.share-fashion-grid {
+.share-fashion-grid,
+.slideshow-container,
+.account-grid,
+.sign-in-grid,
+.sign-up-grid {
     margin-top: 2rem;
 }
 
@@ -375,7 +413,8 @@ img,
 .search-input,
 .what-you-like-image,
 .share-fashion-image,
-.footer-form-input {
+.footer-form-input,
+.slideshow-image {
     width: 100%;
 }
 
@@ -390,13 +429,17 @@ img,
     bottom: calc(100% - 350px);
 }
 
+.arrivals-add-to-cart a {
+    font-weight: 700;
+}
+
 .what-you-like {
     width: 90%;
     margin: 10% auto;
 }
 
 .what-you-like-grid {
-    gap: 5%;
+    gap: .55%;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #fe4066 var(--light-grey);
@@ -427,7 +470,7 @@ img,
 }
 
 .what-you-like-card {
-    min-width: 100%;
+    min-width: 99.55%;
 }
 
 .what-you-like-card p {
@@ -439,6 +482,10 @@ img,
 .service-features-grid,
 .footer-container {
     gap: 2rem;
+}
+
+.fashion-outfit .fr {
+    top: 1vh;
 }
 
 .fashion-outfit-one {
@@ -510,6 +557,12 @@ img,
     background-color: #272727;
 }
 
+.copyright {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+}
+
 .to-top {
     right: 1rem;
     bottom: 2rem;
@@ -521,4 +574,19 @@ img,
 .show-to-top,
 .nav-content-show {
     transform: translateX(0);
+}
+
+.account-grid {
+    gap: 5rem;
+}
+
+.sign-in-grid,
+.sign-up-grid {
+    gap: 1rem;
+}
+
+.account-input {
+    width: calc(100% - 2.1rem);
+    border: 1px solid rgba(138 173 229 / 50%);
+    margin: .5rem 0;
 }
