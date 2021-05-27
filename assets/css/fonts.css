@@ -5,19 +5,13 @@
 }
 
 @font-face {
-    font-family: 'Fira Code';
-    src: url('../fonts/Fira Code.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Luckiest Guy';
     src: url('../fonts/Luckiest Guy.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url('../fonts/Noto Sans.ttf') format('truetype');
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter.ttf') format('truetype');
     font-display: swap;
 }
