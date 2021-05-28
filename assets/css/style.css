@@ -7,8 +7,8 @@
     .container,
     .slideshow-container,
     .account-container,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main,
+    .cloth-preview {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -32,8 +32,8 @@
     .container,
     .slideshow-container,
     .account-container,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main,
+    .cloth-preview {
         margin-left: 2rem;
         margin-right: 2rem;
     }
@@ -57,8 +57,8 @@
     .container,
     .slideshow-container,
     .account-container,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main,
+    .cloth-preview {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
     }
@@ -90,8 +90,8 @@
     .container,
     .slideshow-container,
     .account-container,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main,
+    .cloth-preview {
         margin-left: 3rem;
         margin-right: 3rem;
     }
@@ -113,7 +113,8 @@
     .slideshow-container,
     .what-you-like,
     .account-header,
-    .account-grid .sub-header {
+    .account-grid .sub-header,
+    .cloth-preview {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -121,9 +122,7 @@
 
     .new-arrivals,
     .share-fashion,
-    .clothing-grid,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main {
         margin-left: 1rem;
         margin-right: 1rem;
     }
@@ -169,9 +168,7 @@
 
     .new-arrivals,
     .share-fashion,
-    .clothing-grid,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main {
         margin-left: 2rem;
         margin-right: 2rem;
     }
@@ -195,15 +192,19 @@
         margin-right: 4rem;
     }
 
+    .reviews-grid {
+        grid-template-columns: repeat(2, 6fr);
+        column-gap: 1rem;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
 
     .new-arrivals,
     .share-fashion,
-    .clothing-grid,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main,
+    .cloth-preview {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
     }
@@ -261,11 +262,14 @@
 
 @media only screen and (min-width: 800px) {
 
+    .logo {
+        height: 10%;
+    }
+
     .new-arrivals,
     .share-fashion,
-    .clothing-grid,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main,
+    .cloth-preview {
         margin-left: 3rem;
         margin-right: 3rem;
     }
@@ -371,9 +375,8 @@
     .clothing-grid,
     .new-arrivals,
     .share-fashion,
-    .clothing-grid,
-    .clothing-pagination,
-    .clothing-discount-advert {
+    .clothing-main,
+    .cloth-preview {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -447,6 +450,21 @@
         padding-right: 1rem;
     }
 
+    .clothing-preview-image-grid {
+        grid-template-columns: 10fr 6fr;
+    }
+
+    .clothing-preview-image {
+        grid-template-areas: "one two two"
+                             "three two two"
+                             "four two two";
+        gap: 1rem;
+    }
+
+    .reviews-grid {
+        column-gap: 2rem;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -457,7 +475,8 @@
     .share-fashion,
     .service-features-grid,
     .account-grid,
-    .clothing-grid {
+    .cloth-preview,
+    .clothing-main {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -502,8 +521,13 @@
         width: 40%;
     }
 
-    .account-grid {
+    .account-grid,
+    .clothing-main {
         width: 90%;
+    }
+
+    .account-grid,
+    .reviews-grid {
         column-gap: 5rem;
     }
 
@@ -517,8 +541,11 @@
     }
 
     .clothing-grid {
-        width: 90%;
         gap: 2rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 8fr 5fr;
     }
 
 }  

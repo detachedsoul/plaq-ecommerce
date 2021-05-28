@@ -39,28 +39,35 @@ toTopBtn.addEventListener('click', () => {
     });
 });
 
-let container = document.querySelector('.what-you-like-grid');
+let container = document.querySelectorAll('.what-you-like-grid');
 let totalHorizontalSlide = document.querySelectorAll('.what-you-like-card').length;
 let counter = 1;
 
-let scrollRightBtn = document.querySelector('.what-you-like-btn.right');
-scrollRightBtn.addEventListener('click', () => {
-    sideScroll(container, 'right', 200);
+let scrollRightBtns = document.querySelectorAll('.what-you-like-btn.right');
+scrollRightBtns.forEach(scrollRightBtn => {
+    scrollRightBtn.addEventListener('click', () => {
+        sideScroll(container, 'right', 200);
+    });
 });
 
-let scrollLeftBtn = document.querySelector('.what-you-like-btn.left');
-scrollLeftBtn.addEventListener('click', () => {
-    sideScroll(container,'left', 200);
+let scrollLeftBtns = document.querySelectorAll('.what-you-like-btn.left');
+scrollLeftBtns.forEach(scrollLeftBtn => {
+    scrollLeftBtn.addEventListener('click', () => {
+        sideScroll(container, 'left', 200);
+    });
 });
 
-
-function sideScroll (element, direction, speed) {
+function sideScroll (elements, direction, speed) {
     let slideTimer = setTimeout(function () {
 
         if (direction === 'left') {
-            element.scrollLeft -= element.clientWidth;
+            elements.forEach(element => {
+                element.scrollLeft -= element.clientWidth;
+            });
         } else {
-            element.scrollLeft += element.clientWidth;
+            elements.forEach(element => {
+                element.scrollLeft += element.clientWidth;
+            });
         }
 
         window.clearInterval(slideTimer);
@@ -68,9 +75,11 @@ function sideScroll (element, direction, speed) {
     }, speed);
 }
 
-function sideScrollAuto (element, speed) {
+function sideScrollAuto (elements, speed) {
     let slideTimer = setInterval(function () {
-        element.scrollLeft += element.clientWidth;
+        elements.forEach(element => {
+            element.scrollLeft += element.clientWidth;
+        });
     }, speed);
 }
 

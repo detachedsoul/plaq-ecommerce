@@ -80,11 +80,12 @@ select {
     border: none;
     outline: none;
     font-family: var(--baloo-2);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 100;
 }
 
-button {
+button,
+summary {
     cursor: pointer;
 }
 
@@ -108,11 +109,11 @@ select {
 
 .logo {
     width: 100px;
-    height: 50px;
+    height: auto;
 }
 
 .btn {
-    padding: .5rem 1rem;
+    padding: .7rem 1rem;
 }
 
 .input-focus:focus {
@@ -288,13 +289,13 @@ select {
 .search-input {
     border-top-left-radius: .7rem;
     border-bottom-left-radius: .7rem;
-    padding: .3rem 1.5rem;
+    padding: .5rem 1.5rem;
 }
 
 .search-btn {
     border-top-right-radius: .7rem;
     border-bottom-right-radius: .7rem;
-    padding: .3rem 1.5rem .3rem 1rem;
+    padding: .3rem 1.5rem .3rem 1.3rem;
 }
 
 .search-btn .fr,
@@ -364,7 +365,7 @@ label,
 .nav-content {
     width: calc(80% - 2rem);
     height: 100vh;
-    top: 7.4rem;
+    top: 6.5rem;
     transform: translateX(-100%);
 }
 
@@ -405,7 +406,8 @@ label,
     min-width: 100%;
 }
 
-.slideshow-image {
+.slideshow-image,
+.preview-cloth-image {
     height: 100%;
 }
 
@@ -429,7 +431,11 @@ label,
 .slideshow-container,
 .account-grid,
 .sign-in-grid,
-.sign-up-grid {
+.sign-up-grid,
+.clothing-preview-image-grid,
+.review-container,
+.reviews-grid,
+.top-reviews {
     margin-top: 2rem;
 }
 
@@ -439,7 +445,8 @@ label,
     margin-bottom: 2rem;
 }
 
-.new-arrivals-grid {
+.new-arrivals-grid,
+.cloth-details {
     row-gap: 2rem;
 }
 
@@ -461,8 +468,7 @@ label,
 
 .arrivals-image,
 .what-you-like-image,
-.share-fashion-image,
-.clothing-image {
+.share-fashion-image {
     height: 350px;
 }
 
@@ -523,7 +529,11 @@ label,
 .share-fashion-grid,
 .service-features-grid,
 .footer-container,
-.clothing-grid {
+.clothing-grid,
+.clothing-preview-image-grid,
+.clothing-preview-image,
+.review,
+.top-reviews {
     gap: 2rem;
 }
 
@@ -613,6 +623,7 @@ label,
 }
 
 .to-top {
+    padding: .6rem .7rem .4rem .7rem;
     bottom: 2rem;
     transform: translateX(150%);
     box-shadow: 5px 6px 20px 0 rgba(0 0 0 / 20%);
@@ -631,7 +642,8 @@ label,
 .sign-in-grid,
 .sign-up-grid,
 .clothing-top,
-.clothing-select-filters {
+.clothing-select-filters,
+.preview-details {
     gap: 1rem;
 }
 
@@ -642,6 +654,7 @@ label,
 .account-input {
     width: calc(100% - 2.1rem);
     margin: .5rem 0;
+    padding: .5rem 1rem;
 }
 
 .clothing-top {
@@ -672,11 +685,6 @@ label,
     place-content: center;
 }
 
-.clothing-pagination-links-container,
-.clothing-discount-advert {
-    margin-bottom: 4rem;
-}
-
 .clothing-pagination-link {
     padding: .4rem .8rem;
     border-radius: .5rem;
@@ -703,4 +711,39 @@ label,
 
 .paginate-control {
     top: .3vh;
+}
+
+.cloth-preview-main {
+    padding-bottom: 2rem;
+}
+
+.clothing-preview-image {
+    grid-template-areas: "one three"
+                         "four two";
+    gap: .5rem;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.sizes {
+    border: 1px solid lightgray;
+    padding: .5rem .7rem;
+}
+
+.review-content {
+    column-gap: .5rem;
 }
