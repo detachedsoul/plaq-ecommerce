@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Plaq E-Commerce Template">
     <meta name="author" content="Wisdom Ojimah">
-    <title>Plaq &mdash; Clothing Preview</title>
+    <title>Plaq &mdash; Cloth Preview</title>
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
     <!-- Preload stylesheets and scripts -->
+    <link rel="preload" href="assets/css/preloader.css" as="style">
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
     <link rel="preload" href="assets/css/fonts.css" as="style">
@@ -19,17 +20,26 @@
 
 
     <!-- Actual stylehseet -->
+    <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
 <body class="bg-light-grey">
+
+    <div class="preloader-container fixed bg-white grid place-center">
+
+        <div class="preloader-content">
+            <img src="assets/img/preloader.gif" alt="Preloader">
+        </div>
+
+    </div>
     
     <!-- Header Section -->
     <header class="flex flex-column sticky bg-white">
 
         <div class="top-header flex justify-between align-center bg-white">
 
-            <form class="search-container absolute flex" action="search.html" method="GET">
+            <form class="search-container absolute flex" action="" method="get">
 
                 <input class="search-input input-focus bg-light-grey" type="text" placeholder="Search..." name="search">
 
@@ -43,12 +53,12 @@
 
             <div>
 
-                <a class="top-nav-link-icon" href="account.html" aria-label="Login to one's account">
+                <a class="top-nav-link-icon black" href="account.html" aria-label="Login to one's account">
                     <i class="fr fi-rr-users relative"></i>
                     Account
                 </a>
 
-                <a href="cart.html" aria-label="Check what is in cart">
+                <a class="black" href="cart.html" aria-label="Check what is in cart">
                     <i class="fr fi-rr-shopping-cart-check relative"></i>
                     Cart
                 </a>
@@ -57,11 +67,11 @@
 
         </div>
 
-        <div class="nav-content-container flex flex-column relative bg-light-grey">
+        <div class="nav-content-container flex flex-column relative bg-white">
 
             <div class="nav-togglers sticky flex align-center justify-between">
 
-                <a class="search-toggle" href="javascript:void(0)" aria-label="Search bar toggler">
+                <a class="search-toggle black" href="javascript:void(0)" aria-label="Search bar toggler">
                     <i class="fr fi-rr-search relative"></i>
                 </a>
 
@@ -78,36 +88,35 @@
                     <ul class="nav-links flex flex-column">
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="index.html">
+                            <a class="nav-link border-7 black" href="index.html">
                                 <i class="fr fi-rr-home relative nav-link-icon"></i>
                                 Home
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn active" href="clothing.html">
+                            <a class="nav-link active border-7" href="clothing.html">
                                 <i class="fr fi-rr-portrait relative nav-link-icon"></i>
                                 Clothing
                             </a>
                         </li>
 
-
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="new-arrivals.html">
+                            <a class="nav-link border-7 black" href="new-arrivals.html">
                                 <i class="fr fi-rr-world relative nav-link-icon"></i>
                                 New Arrivals
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="dressers.html">
+                            <a class="nav-link border-7 black" href="dressers.html">
                                 <i class="fr fi-rr-camera relative nav-link-icon"></i>
                                 Dressers
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="trending.html">
+                            <a class="nav-link border-7 black" href="trending.html">
                                 <i class="fr fi-rr-gallery relative nav-link-icon"></i>
                                 Trending
                             </a>
@@ -125,7 +134,7 @@
 
     <main class="cloth-preview-main">
 
-        <div class="cloth-preview container">
+        <div class="cloth-preview container lg-w-80">
 
             <div class="clothing-top-header">
 
@@ -142,133 +151,133 @@
             </div>
         
 
-            <div class="clothing-preview-image-grid grid">
+            <section class="clothing-preview-image-grid grid">
 
                 <div class="clothing-preview-image grid">
                     
                     <div class="one">
-                        <img class="preview-cloth-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
+                        <img class="preview-cloth-image" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
                     </div>
 
                     <div class="two">
-                        <img class="preview-cloth-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
+                        <img class="preview-cloth-image" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
                     </div>
 
                     <div class="three">
-                        <img class="preview-cloth-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
+                        <img class="preview-cloth-image" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
                     </div>
 
                     <div class="four">
-                        <img class="preview-cloth-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
+                        <img class="preview-cloth-image" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Preview Image" width="100%" height="100%">
                     </div>
 
                 </div>
 
                 <div class="cloth-details flex flex-column">
 
-                <div>
+                    <div>
 
-                    <h1 class="header">
-                        Blue Sleeves Gown
-                    </h1>
+                        <h1 class="header">
+                            Military Stripe Jacket
+                        </h1>
 
-                    <div class="clothing-card-text flex align-center justify-between sub-header">
+                        <div class="clothing-card-text flex align-center justify-between sub-header">
 
+                            <div>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="preview-details flex flex-column">
+                        
                         <div>
 
                             <p>
-                                D&G
+                                Sizes
                             </p>
 
-                            <P>
-                                <span class="old-price">
-                                    #50000
+                            <div class="flex">
+
+                                <span class="sizes">
+                                    XXS
                                 </span>
-                                #25000
-                            </P>
+                                <span class="sizes">
+                                    XS
+                                </span>
+                                <span class="sizes">
+                                    M
+                                </span>
+                                <span class="sizes">
+                                    L
+                                </span>
+                                <span class="sizes">
+                                    XL
+                                </span>
+
+                            </div>
+
 
                         </div>
 
-                        <div class="discount-box bg-black flex place-center">
-                            50% <br>
-                            OFF
-                        </div>
+                        <details>
+                            <summary>Details</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo debitis. Maiores, perferendis quam, quia vero temporibus explicabo modi adipisci veniam soluta laborum impedit quibusdam, rerum qui. Laborum, ea aliquid.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>Sizing Chart</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo debitis. Maiores, perferendis quam, quia vero temporibus explicabo modi adipisci veniam soluta laborum impedit quibusdam, rerum qui. Laborum, ea aliquid.
+                            </p>
+                        </details>
+
+                        <details>
+                            <summary>Shipping Info</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi nemo dignissimos ipsa reiciendis ab magnam culpa sequi tenetur nobis! Corporis laboriosam necessitatibus hic sit dolorem ratione asperiores fuga doloribus!
+                            </p>
+                        </details>
 
                     </div>
 
-                </div>
 
-                <div class="preview-details flex flex-column">
-                    
-                    <div>
+                    <div class="flex align-center justify-between">
 
-                        <p>
-                            Size
-                        </p>
+                        <a class="btn bg-black bg-black-btn-hover" href="cart.html">
+                            ADD TO CART
+                        </a>
 
-                        <div class="flex">
+                        <a class="btn bg-black bg-black-btn-hover" href="cart.html">
+                            BUY NOW
+                        </a>
 
-                            <span class="sizes">
-                                XXS
-                            </span>
-                            <span class="sizes">
-                                XS
-                            </span>
-                            <span class="sizes">
-                                M
-                            </span>
-                            <span class="sizes">
-                                L
-                            </span>
-                            <span class="sizes">
-                                XL
-                            </span>
-
-                        </div>
-
-
+                        
                     </div>
-
-                    <details>
-                        <summary>Details</summary>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo debitis. Maiores, perferendis quam, quia vero temporibus explicabo modi adipisci veniam soluta laborum impedit quibusdam, rerum qui. Laborum, ea aliquid.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>Sizing Chart</summary>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illo debitis. Maiores, perferendis quam, quia vero temporibus explicabo modi adipisci veniam soluta laborum impedit quibusdam, rerum qui. Laborum, ea aliquid.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary>Shipping Info</summary>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi nemo dignissimos ipsa reiciendis ab magnam culpa sequi tenetur nobis! Corporis laboriosam necessitatibus hic sit dolorem ratione asperiores fuga doloribus!
-                        </p>
-                    </details>
-
+                
                 </div>
 
-
-                <div class="flex align-center justify-between">
-
-                    <a class="btn bg-black bg-black-btn-hover" href="cart.html">
-                        ADD TO CART
-                    </a>
-
-                    <a class="btn bg-black bg-black-btn-hover" href="cart.html">
-                        BUY NOW
-                    </a>
-
-                    
-                </div>
-
-                </div>
-
-            </div>
+            </section>
 
 
             <div class="review-container">
@@ -508,123 +517,222 @@
                 </div>
 
             </div>
-            
+
         </div>
 
-        <div>
+        <section class="relative">
 
+            <button class="what-you-like-btn absolute left active" aria-label="What you may like scroll buttons">
+                <i class="fi fi-rr-angle-left relative"></i>
+            </button>
 
-            <section class="relative">
+            <button class="what-you-like-btn absolute right active" aria-label="What you may like scroll buttons">
+                <i class="fi fi-rr-angle-right relative"></i>
+            </button>
 
-                <button class="what-you-like-btn absolute left active" aria-label="What you may like scroll buttons">
-                    <i class="fi fi-rr-angle-left relative"></i>
-                </button>
+            <div class="what-you-like lg-w-80">
 
-                <button class="what-you-like-btn absolute right active" aria-label="What you may like scroll buttons">
-                    <i class="fi fi-rr-angle-right relative"></i>
-                </button>
+                <h3 class="header">
+                    Recently Viewed
+                </h3>
 
-                <div class="what-you-like cloth-preview-scroll">
+                <div class="what-you-like-grid flex justify-between align-center">
 
-                    <h3 class="header">
-                        Recently Viewed
-                    </h3>
+                    <div class="what-you-like-card">
 
-                    <div class="what-you-like-grid flex justify-between align-center">
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-1.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
 
-                        <div class="what-you-like-card">
+                            <div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellowish Orange Gown
-                                </a>
-                            </p>
+                                <p>
+                                    <a class="link" href="category-preview.html">
+                                        Brown Gown
+                                    </a>
+                                </p>
 
-                        </div>
+                                <p>
+                                    D&G
+                                </p>
 
-                        <div class="what-you-like-card">
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Black Leather Jacket
-                                </a>
-                            </p>
+                            </div>
 
-                        </div>
-
-                        <div class="what-you-like-card">
-
-                            <img class="what-you-may-like-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    White Animal Shirt
-                                </a>
-                            </p>
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
 
                         </div>
 
-                        <div class="what-you-like-card">
+                    </div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellow Check Gown
-                                </a>
-                            </p>
+                    <div class="what-you-like-card">
 
-                        </div>
+                        <img class="what-you-may-like-image border-1" src="assets/img/black-jacket.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
 
-                        <div class="what-you-like-card">
+                            <div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellowish Orange Gown
-                                </a>
-                            </p>
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        Black Leather Jacket
+                                    </a>
+                                </p>
 
-                        </div>
+                                <p>
+                                    D&G
+                                </p>
 
-                        <div class="what-you-like-card">
+                                <P>
+                                    #25000
+                                </P>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="">
-                                    Black Leather Jacket
-                                </a>
-                            </p>
+                            </div>
 
                         </div>
 
-                        <div class="what-you-like-card">
+                    </div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    White Animal Shirt
-                                </a>
-                            </p>
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-2.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        White Sweater
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
 
                         </div>
 
-                        <div class="what-you-like-card">
+                    </div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellow Check Gown
-                                </a>
-                            </p>
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-1.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="category-preview.html">
+                                        Brown Gown
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/black-jacket.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        Black Leather Jacket
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-2.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        White Sweater
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
 
                         </div>
 
@@ -632,120 +740,224 @@
 
                 </div>
 
+            </div>
 
-            </section>
+        </section>
 
-            <section class="relative">
 
-                <button class="what-you-like-btn absolute left active" aria-label="What you may like scroll buttons">
-                    <i class="fi fi-rr-angle-left relative"></i>
-                </button>
+        <section class="relative">
 
-                <button class="what-you-like-btn absolute right active" aria-label="What you may like scroll buttons">
-                    <i class="fi fi-rr-angle-right relative"></i>
-                </button>
+            <button class="what-you-like-btn absolute left active" aria-label="What you may like scroll buttons">
+                <i class="fi fi-rr-angle-left relative"></i>
+            </button>
 
-                <div class="what-you-like">
+            <button class="what-you-like-btn absolute right active" aria-label="What you may like scroll buttons">
+                <i class="fi fi-rr-angle-right relative"></i>
+            </button>
 
-                    <h3 class="header">
-                        Related Products
-                    </h3>
+            <div class="what-you-like lg-w-80">
 
-                    <div class="what-you-like-grid flex justify-between align-center">
+                <h3 class="header">
+                    Related Products
+                </h3>
 
-                        <div class="what-you-like-card">
+                <div class="what-you-like-grid flex justify-between align-center">
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellowish Orange Gown
-                                </a>
-                            </p>
+                    <div class="what-you-like-card">
 
-                        </div>
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-1.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
 
-                        <div class="what-you-like-card">
+                            <div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Black Leather Jacket
-                                </a>
-                            </p>
+                                <p>
+                                    <a class="link" href="category-preview.html">
+                                        Brown Gown
+                                    </a>
+                                </p>
 
-                        </div>
+                                <p>
+                                    D&G
+                                </p>
 
-                        <div class="what-you-like-card">
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    White Animal Shirt
-                                </a>
-                            </p>
+                            </div>
 
-                        </div>
-
-                        <div class="what-you-like-card">
-
-                            <img class="what-you-may-like-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellow Check Gown
-                                </a>
-                            </p>
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
 
                         </div>
 
-                        <div class="what-you-like-card">
+                    </div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellowish Orange Gown
-                                </a>
-                            </p>
+                    <div class="what-you-like-card">
 
-                        </div>
+                        <img class="what-you-may-like-image border-1" src="assets/img/black-jacket.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
 
-                        <div class="what-you-like-card">
+                            <div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="">
-                                    Black Leather Jacket
-                                </a>
-                            </p>
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        Black Leather Jacket
+                                    </a>
+                                </p>
 
-                        </div>
+                                <p>
+                                    D&G
+                                </p>
 
-                        <div class="what-you-like-card">
+                                <P>
+                                    #25000
+                                </P>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    White Animal Shirt
-                                </a>
-                            </p>
+                            </div>
 
                         </div>
 
-                        <div class="what-you-like-card">
+                    </div>
 
-                            <img class="what-you-may-like-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                            
-                            <p>
-                                <a href="clothing.html">
-                                    Yellow Check Gown
-                                </a>
-                            </p>
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-2.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        White Sweater
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-1.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="category-preview.html">
+                                        Brown Gown
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/black-jacket.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        Black Leather Jacket
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="what-you-like-card">
+
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-2.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        
+                        <div class="flex align-center justify-between">
+
+                            <div>
+
+                                <p>
+                                    <a class="link" href="clothing.html">
+                                        White Sweater
+                                    </a>
+                                </p>
+
+                                <p>
+                                    D&G
+                                </p>
+
+                                <P>
+                                    <span class="old-price">
+                                        #50000
+                                    </span>
+                                    #25000
+                                </P>
+
+                            </div>
+
+                            <div class="discount-box bg-black flex place-center">
+                                50% <br>
+                                OFF
+                            </div>
 
                         </div>
 
@@ -753,25 +965,25 @@
 
                 </div>
 
-            </section>
+            </div>
+
+        </section>
 
 
-            <div class="clothing-discount-advert container fashion-outfit fashion-outfit-three relative">
+        <div class="clothing-discount-advert fashion-outfit fashion-outfit-three relative lg-w-80">
 
-                <div class="fashion-outfit-text-three absolute flex align-center justify-between">
+            <div class="fashion-outfit-text-three absolute flex align-center justify-between">
 
-                    <h3 class="header text-center white">
-                        50% OFF <br>
-                        On All Items
-                    </h3>
+                <h3 class="header text-center white">
+                    50% OFF <br>
+                    On All Items
+                </h3>
 
-                    <p>
-                        <a class="bg-white btn border-7" href="">
-                            Shop Now
-                        </a>
-                    </p>
-
-                </div>
+                <p>
+                    <a class="bg-white btn border-7" href="">
+                        Shop Now
+                    </a>
+                </p>
 
             </div>
 
@@ -781,7 +993,7 @@
 
     
     <!-- Footer -->
-    <footer class="bg-light-grey">
+    <footer>
 
         <div class="footer-container grid justify-between">
 
@@ -794,7 +1006,7 @@
                 </h3>
 
                 <a class="footer-links link" href="">
-                    Sell with us
+                    Sell With Us
                 </a>
 
                 <a class="footer-links link" href="">

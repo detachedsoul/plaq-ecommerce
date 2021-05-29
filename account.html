@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
     <!-- Preload stylesheets and scripts -->
+    <link rel="preload" href="assets/css/preloader.css" as="style">
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
     <link rel="preload" href="assets/css/fonts.css" as="style">
@@ -19,17 +20,26 @@
 
 
     <!-- Actual stylehseet -->
+    <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
 <body class="bg-white">
+
+    <div class="preloader-container fixed bg-white grid place-center">
+
+        <div class="preloader-content">
+            <img src="assets/img/preloader.gif" alt="Preloader">
+        </div>
+
+    </div>
 
     <!-- Header Section -->
     <header class="flex flex-column sticky bg-white">
 
         <div class="top-header flex justify-between align-center bg-white">
 
-            <form class="search-container absolute flex" action="search.html" method="GET">
+            <form class="search-container absolute flex" action="" method="get">
 
                 <input class="search-input input-focus bg-light-grey" type="text" placeholder="Search..." name="search">
 
@@ -48,7 +58,7 @@
                     Account
                 </a>
 
-                <a href="cart.html" aria-label="Check what is in cart">
+                <a class="black" href="cart.html" aria-label="Check what is in cart">
                     <i class="fr fi-rr-shopping-cart-check relative"></i>
                     Cart
                 </a>
@@ -57,11 +67,11 @@
 
         </div>
 
-        <div class="nav-content-container flex flex-column relative bg-light-grey">
+        <div class="nav-content-container flex flex-column relative bg-white">
 
             <div class="nav-togglers sticky flex align-center justify-between">
 
-                <a class="search-toggle" href="javascript:void(0)" aria-label="Search bar toggler">
+                <a class="search-toggle black" href="javascript:void(0)" aria-label="Search bar toggler">
                     <i class="fr fi-rr-search relative"></i>
                 </a>
 
@@ -78,36 +88,35 @@
                     <ul class="nav-links flex flex-column">
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="index.html">
+                            <a class="nav-link border-7 black" href="index.html">
                                 <i class="fr fi-rr-home relative nav-link-icon"></i>
                                 Home
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="clothing.html">
+                            <a class="nav-link border-7 black" href="clothing.html">
                                 <i class="fr fi-rr-portrait relative nav-link-icon"></i>
                                 Clothing
                             </a>
                         </li>
 
-
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="new-arrivals.html">
+                            <a class="nav-link border-7 black" href="new-arrivals.html">
                                 <i class="fr fi-rr-world relative nav-link-icon"></i>
                                 New Arrivals
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="dressers.html">
+                            <a class="nav-link border-7 black" href="dressers.html">
                                 <i class="fr fi-rr-camera relative nav-link-icon"></i>
                                 Dressers
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="trending.html">
+                            <a class="nav-link border-7 black" href="trending.html">
                                 <i class="fr fi-rr-gallery relative nav-link-icon"></i>
                                 Trending
                             </a>
@@ -123,121 +132,116 @@
 
     </header>
 
+    <div class="account-container container">
 
-    <main>
-
-        <div class="container account-container">
-
-            <h3 class="account-header header text-center">
-                Welcome to Plaq. You are on the best clothing
-                line in the world
-            </h1>
+        <h3 class="account-header header text-center">
+            Welcome to Plaq. You are on the best clothing
+            line in the world
+        </h1>
 
 
-            <div class="account-grid grid">
+        <div class="account-grid grid">
 
-                <section>
+            <div>
 
-                    <h4 class="text-center">
+                <h4 class="header text-center">
+                    Sign In
+                </h4>
+                <p class="sub-header text-center">
+                    Welcome back. Sign in to checkout faster
+                </p>
+
+                <form class="sign-in-grid grid" action="" method="post">
+
+                    <div>
+                        
+                        <label for="sign-in-username">
+                            Username
+                        </label>
+                        <input class="account-input input-focus border-7" type="text" placeholder="Enter username" name="username" id="sign-in-username" required>
+
+                    </div>
+
+                    <div>
+                        
+                        <label for="sign-in-password">
+                            Password
+                        </label>
+                        <input class="account-input input-focus border-7" type="password" placeholder="Enter password" name="password" id="sign-in-password" required>
+
+                    </div>
+
+                    <button class="bg-black bg-black-btn-hover white btn border-7" type="submit">
                         Sign In
-                    </h4>
-                    <p class="sub-header text-center">
-                        Welcome back. Sign in to checkout faster
-                    </p>
+                    </button>
 
-                    <form class="sign-in-grid grid" action="" method="post">
+                </form>
 
-                        <div>
-                            
-                            <label for="sign-in-username">
-                                Username
-                            </label>
-                            <input class="account-input input-focus border-7" type="text" placeholder="Enter username" name="username" id="sign-in-username" required>
-
-                        </div>
-
-                        <div>
-                            
-                            <label for="sign-in-password">
-                                Password
-                            </label>
-                            <input class="account-input input-focus border-7" type="password" placeholder="Enter password" name="password" id="sign-in-password" required>
-
-                        </div>
-
-                        <button class="bg-black bg-black-btn-hover white btn border-7" type="submit">
-                            SIGN IN
-                        </button>
-
-                    </form>
-
-                </section>
+            </div>
 
 
-                <section>
+            <div>
 
-                    <h4 class="text-center">
+                <h4 class="header text-center">
+                    Register
+                </h4>
+                <p class="sub-header text-center">
+                    New to Plaq? Create an account for amazing features
+                </p>
+
+                <form class="sign-up-grid grid" action="" method="post">
+
+                    <div>
+                        
+                        <label for="fullname">
+                            Fullname
+                        </label>
+                        <input class="account-input input-focus border-7" type="text" placeholder="Enter fullname" name="fullname" id="fullname" maxlength="255" required>
+
+                    </div>
+
+                    <div>
+                        
+                        <label for="username">
+                            Username
+                        </label>
+                        <input class="account-input input-focus border-7" type="text" placeholder="Enter username" name="username" id="username" required minlength="2" maxlength="255">
+
+                    </div>
+
+                    <div>
+                        
+                        <label for="email">
+                            Email
+                        </label>
+                        <input class="account-input input-focus border-7" type="email" placeholder="Enter email" name="email" id="email" required>
+
+                    </div>
+
+                    <div>
+                        
+                        <label for="password">
+                            Password
+                        </label>
+                        <input class="account-input input-focus border-7" type="password" placeholder="Enter Password" name="password" id="password" required>
+
+                    </div>
+
+                    <button class="bg-black bg-black-btn-hover white btn border-7" type="submit" id="sign-up-btn">
                         Register
-                    </h4>
-                    <p class="sub-header text-center">
-                        New to Plaq? Create an account to shop and checkout faster and easier
-                    </p>
+                    </button>
 
-                    <form class="sign-up-grid grid" action="" method="post">
-
-                        <div>
-                            
-                            <label for="fullname">
-                                Fullname
-                            </label>
-                            <input class="account-input input-focus border-7" type="text" placeholder="Enter fullname" name="fullname" id="fullname" maxlength="255" required>
-
-                        </div>
-
-                        <div>
-                            
-                            <label for="username">
-                                Username
-                            </label>
-                            <input class="account-input input-focus border-7" type="text" placeholder="Enter username" name="username" id="username" required minlength="2" maxlength="255">
-
-                        </div>
-
-                        <div>
-                            
-                            <label for="email">
-                                Email
-                            </label>
-                            <input class="account-input input-focus border-7" type="email" placeholder="Enter email" name="email" id="email" required>
-
-                        </div>
-
-                        <div>
-                            
-                            <label for="password">
-                                Password
-                            </label>
-                            <input class="account-input input-focus border-7" type="password" placeholder="Enter Password" name="password" id="password" required>
-
-                        </div>
-
-                        <button class="bg-black bg-black-btn-hover white btn border-7" type="submit" id="sign-up-btn">
-                            Register
-                        </button>
-
-                    </form>
-
-                </section>
+                </form>
 
             </div>
 
         </div>
 
-    </main>
+    </div>
 
 
     <!-- Footer -->
-    <footer class="bg-light-grey">
+    <footer>
 
         <div class="footer-container grid justify-between">
 

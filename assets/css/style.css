@@ -1,11 +1,12 @@
 @media only screen and (min-width: 375px) {
 
-    .slideshow-container {
-        border-radius: 1rem;
+    .container {
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .container,
-    .slideshow-container,
+    .new-arrivals,
+    .fashion-outfit,
     .account-container,
     .clothing-main,
     .cloth-preview {
@@ -29,8 +30,8 @@
         width: calc(70% - 2rem);
     }
 
-    .container,
-    .slideshow-container,
+    .new-arrivals,
+    .fashion-outfit,
     .account-container,
     .clothing-main,
     .cloth-preview {
@@ -54,8 +55,8 @@
         width: calc(65% - 2rem);
     }
 
-    .container,
-    .slideshow-container,
+    .new-arrivals,
+    .fashion-outfit,
     .account-container,
     .clothing-main,
     .cloth-preview {
@@ -66,6 +67,7 @@
     .service-features-grid {
         margin-left: 0;
         margin-right: 0;
+        -ms-grid-columns: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
     }
@@ -87,8 +89,8 @@
         width: calc(60% - 2rem);
     }
 
-    .container,
-    .slideshow-container,
+    .new-arrivals,
+    .fashion-outfit,
     .account-container,
     .clothing-main,
     .cloth-preview {
@@ -110,7 +112,6 @@
         width: calc(55% - 2rem);
     }
 
-    .slideshow-container,
     .what-you-like,
     .account-header,
     .account-grid .sub-header,
@@ -119,7 +120,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-
+    
     .new-arrivals,
     .share-fashion,
     .clothing-main {
@@ -130,6 +131,7 @@
     .new-arrivals-grid,
     .share-fashion-grid,
     .clothing-grid {
+        -ms-grid-columns: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem 1.2rem;
     }
@@ -137,6 +139,10 @@
     .what-you-like,
     .account-header {
         width: 80%;
+    }
+
+    .coming-soon-content {
+        width: 70%;
     }
 
 }
@@ -150,6 +156,22 @@
     .account-container {
         margin-left: 3.5rem;
         margin-right: 3.5rem;
+    }
+
+    .what-you-like-grid {
+        gap: 2%;
+    }
+
+    .what-you-like-btn.right {
+        right: 1%;
+    }
+
+    .what-you-like-btn.left {
+        left: 1%;
+    }
+
+    .what-you-like-card {
+        min-width: 48.2%;
     }
 
 }
@@ -193,36 +215,32 @@
     }
 
     .reviews-grid {
-        grid-template-columns: repeat(2, 6fr);
+        -ms-grid-columns: repeat(2, 6fr);
+        -webkit-column-gap: 1rem;
+        -o-column-gap: 1rem;
+        -moz-column-gap: 1rem;
+        -ms-column-gap: 1rem;
         column-gap: 1rem;
+        grid-template-columns: repeat(2, 6fr);
     }
 
 }
 
 @media only screen and (min-width: 768px) {
 
-    .new-arrivals,
+    .slideshow-image {
+        height: auto;
+    }
+
+    .nav-content {
+        width: calc(40% - 2rem);
+    }
+
     .share-fashion,
     .clothing-main,
     .cloth-preview {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
-    }
-
-    .what-you-like-grid {
-        gap: 2%;
-    }
-
-    .what-you-like-btn.right {
-        right: 1%;
-    }
-
-    .what-you-like-btn.left {
-        left: 1%;
-    }
-
-    .what-you-like-card {
-        min-width: 48.2%;
     }
 
     .fashion-outfit {
@@ -258,9 +276,17 @@
         margin-right: 5rem;
     }
 
+    .coming-soon-content {
+        width: 80%;
+    }
+
 }
 
 @media only screen and (min-width: 800px) {
+
+    .nav-content {
+        width: calc(35% - 2rem);
+    }
 
     .logo {
         height: 10%;
@@ -275,7 +301,9 @@
     }
 
     .footer-container {
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
@@ -289,7 +317,8 @@
     }
 
     .account-grid {
-        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -319,8 +348,12 @@
     .search-container,
     .nav-content {
         position: static;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
         transform: translateY(0);
-    }
+}
 
     .top-nav-link-icon {
         margin-right: 3rem;
@@ -334,9 +367,8 @@
     }
 
     .nav-content-container,
-    .nav-links,
-    .clothing-top,
-    .clothing-select-filters {
+    .nav-links {
+        -ms-flex-direction: row;
         flex-direction: row;
         align-items: center;
     }
@@ -359,20 +391,26 @@
 
     .nav-links,
     .account-grid {
-        column-gap: 2rem;
+        -webkit-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+        -ms-column-gap: 2rem;
+        -o-column-gap: 2rem;
+            column-gap: 2rem;
     }
 
     .nav-link {
         display: initial;
-        padding-top: .9rem;
-        padding-bottom: .7rem;
+        padding: .8rem 1rem .6rem 1rem;;
+    }
+
+    .nav-link .fr {
+        top: .8vh;
     }
 
     .new-arrivals,
     .fashion-outfit,
     .service-features-grid,
     .subscribe-to-news-letter,
-    .clothing-grid,
     .new-arrivals,
     .share-fashion,
     .clothing-main,
@@ -388,18 +426,17 @@
     }
 
     .service-features-grid {
-        grid-template-columns: repeat(4, 1fr);
+        -ms-grid-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
         gap: .5rem;
     }
 
     .subscribe-to-news-letter,
-    .slideshow-container,
     .account-grid .sub-header {
         width: 80%;
     }
 
-    .subscribe-to-news-letter,
-    .slideshow-container {
+    .subscribe-to-news-letter {
         margin-top: 2rem;
     }
 
@@ -414,7 +451,7 @@
         margin-top: 5rem;
     }
 
-    .account-grid section:first-child {
+    .account-grid > div:first-child {
         border-right: 1px dotted #272727;
         padding-right: 2rem;
     }
@@ -445,13 +482,9 @@
         grid-area: sign-up-btn;
     }
 
-    .clothing-top {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     .clothing-preview-image-grid {
-        grid-template-columns: 10fr 6fr;
+        -ms-grid-columns: 10fr 6fr;
+            grid-template-columns: 10fr 6fr;
     }
 
     .clothing-preview-image {
@@ -462,28 +495,58 @@
     }
 
     .reviews-grid {
-        column-gap: 2rem;
+        -webkit-column-gap: 2rem;
+        -o-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+        -ms-column-gap: 2rem;
+            column-gap: 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .clothing-top,
+    .clothing-select-filters {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .what-you-like-btn.right {
+        right: 2%;
+    }
+
+    .what-you-like-btn.left {
+        left: 2%;
+    }
+
+    .what-you-like-card {
+        min-width: 31.5%;
+    }
+
+    .coming-soon-content {
+        width: 50%;
     }
 
 }
 
 @media only screen and (min-width: 1200px) {
-    
-    .new-arrivals,
-    .what-you-like,
-    .fashion-outfit,
-    .share-fashion,
-    .service-features-grid,
-    .account-grid,
-    .cloth-preview,
-    .clothing-main {
+
+    .lg-w-80 {
         width: 80%;
+    }
+    
+    .lg-w-80,
+    .account-grid {
         margin-left: auto;
         margin-right: auto;
     }
 
     .new-arrivals-grid {
-        grid-template-columns: repeat(3, 1fr);
+        -ms-grid-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
     }
 
     .what-you-like-btn.right {
@@ -494,22 +557,21 @@
         left: 5%;
     }
 
-    .what-you-like-card {
-        min-width: 31.5%;
-    }
-
     .share-fashion-grid,
     .service-features-grid,
     .clothing-grid {
-        grid-template-columns: repeat(4, 1fr);
+        -ms-grid-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
     }
 
     .footer-container {
+        display: -ms-grid;
         display: grid;
         margin-left: 3%;
         margin-right: 3%;
-        grid-template-columns: repeat(4, 2fr) 5fr;
+        -ms-grid-columns: repeat(4, 2fr) 5fr;
+            grid-template-columns: repeat(4, 2fr) 5fr;
     }
 
     .subscribe-to-news-letter {
@@ -528,16 +590,15 @@
 
     .account-grid,
     .reviews-grid {
-        column-gap: 5rem;
+        -webkit-column-gap: 5rem;
+        -moz-column-gap: 5rem;
+        -o-column-gap: 5rem;
+        -ms-column-gap: 5rem;
+            column-gap: 5rem;
     }
 
-    .account-grid section:first-child {
+    .account-grid > div:first-child {
         padding-right: 5rem;
-    }
-
-    .clothing-top {
-        padding-left: 5%;
-        padding-right: 5%;
     }
 
     .clothing-grid {
@@ -545,7 +606,16 @@
     }
 
     .reviews-grid {
-        grid-template-columns: 8fr 5fr;
+        -ms-grid-columns: 8fr 5fr;
+            grid-template-columns: 8fr 5fr;
     }
 
 }  
+
+@media only screen and (min-width: 1250px) {
+
+    .clothing-main {
+        width: 80%;
+    }
+
+}

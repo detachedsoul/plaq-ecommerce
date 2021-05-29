@@ -1,3 +1,14 @@
+let preloader = document.querySelector('.preloader-container');
+window.onload = () => {
+
+    setTimeout(() => {
+        preloader.classList.add('hide-preloader');
+    }, 1000);
+
+};
+
+
+let toTopBtn    = document.querySelector('.to-top');
 window.onscroll = () => {
     if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
         toTopBtn.classList.add('show-to-top');
@@ -5,6 +16,13 @@ window.onscroll = () => {
         toTopBtn.classList.remove('show-to-top');
     }
 };
+toTopBtn.addEventListener('click', () => {
+    scrollTo({
+        top: 0,
+        right: 0,
+        behavior: 'smooth'
+    });
+});
 
 
 let searchToggleBtn     =   document.querySelector('.search-toggle');
@@ -30,23 +48,17 @@ navLinks.forEach(navLink => {
     });
 });
 
-let toTopBtn = document.querySelector('.to-top');
-toTopBtn.addEventListener('click', () => {
-    scrollTo({
-        top: 0,
-        right: 0,
-        behavior: 'smooth'
-    });
-});
 
-let container = document.querySelectorAll('.what-you-like-grid');
-let totalHorizontalSlide = document.querySelectorAll('.what-you-like-card').length;
+
+let container               = document.querySelectorAll('.what-you-like-grid');
+let totalHorizontalSlide    = document.querySelectorAll('.what-you-like-card').length;
 let counter = 1;
 
 let scrollRightBtns = document.querySelectorAll('.what-you-like-btn.right');
 scrollRightBtns.forEach(scrollRightBtn => {
     scrollRightBtn.addEventListener('click', () => {
         sideScroll(container, 'right', 200);
+        console.log(scrollRightBtn.nextElementSibling);
     });
 });
 

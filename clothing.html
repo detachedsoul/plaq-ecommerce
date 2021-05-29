@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
     <!-- Preload stylesheets and scripts -->
+    <link rel="preload" href="assets/css/preloader.css" as="style">
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
     <link rel="preload" href="assets/css/fonts.css" as="style">
@@ -19,17 +20,26 @@
 
 
     <!-- Actual stylehseet -->
+    <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
 <body class="bg-white">
+
+    <div class="preloader-container fixed bg-white grid place-center">
+
+        <div class="preloader-content">
+            <img src="assets/img/preloader.gif" alt="Preloader">
+        </div>
+
+    </div>
 
     <!-- Header Section -->
     <header class="flex flex-column sticky bg-white">
 
         <div class="top-header flex justify-between align-center bg-white">
 
-            <form class="search-container absolute flex" action="search.html" method="GET">
+            <form class="search-container absolute flex" action="" method="get">
 
                 <input class="search-input input-focus bg-light-grey" type="text" placeholder="Search..." name="search">
 
@@ -43,12 +53,12 @@
 
             <div>
 
-                <a class="top-nav-link-icon" href="account.html" aria-label="Login to one's account">
+                <a class="top-nav-link-icon black" href="account.html" aria-label="Login to one's account">
                     <i class="fr fi-rr-users relative"></i>
                     Account
                 </a>
 
-                <a href="cart.html" aria-label="Check what is in cart">
+                <a class="black" href="cart.html" aria-label="Check what is in cart">
                     <i class="fr fi-rr-shopping-cart-check relative"></i>
                     Cart
                 </a>
@@ -57,11 +67,11 @@
 
         </div>
 
-        <div class="nav-content-container flex flex-column relative bg-light-grey">
+        <div class="nav-content-container flex flex-column relative bg-white">
 
             <div class="nav-togglers sticky flex align-center justify-between">
 
-                <a class="search-toggle" href="javascript:void(0)" aria-label="Search bar toggler">
+                <a class="search-toggle black" href="javascript:void(0)" aria-label="Search bar toggler">
                     <i class="fr fi-rr-search relative"></i>
                 </a>
 
@@ -78,36 +88,35 @@
                     <ul class="nav-links flex flex-column">
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="index.html">
+                            <a class="nav-link border-7 black" href="index.html">
                                 <i class="fr fi-rr-home relative nav-link-icon"></i>
                                 Home
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn active" href="clothing.html">
+                            <a class="nav-link active border-7" href="clothing.html">
                                 <i class="fr fi-rr-portrait relative nav-link-icon"></i>
                                 Clothing
                             </a>
                         </li>
 
-
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="new-arrivals.html">
+                            <a class="nav-link border-7 black" href="new-arrivals.html">
                                 <i class="fr fi-rr-world relative nav-link-icon"></i>
                                 New Arrivals
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="dressers.html">
+                            <a class="nav-link border-7 black" href="dressers.html">
                                 <i class="fr fi-rr-camera relative nav-link-icon"></i>
                                 Dressers
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="trending.html">
+                            <a class="nav-link border-7 black" href="trending.html">
                                 <i class="fr fi-rr-gallery relative nav-link-icon"></i>
                                 Trending
                             </a>
@@ -124,9 +133,9 @@
     </header>
 
 
-    <main class="clothing-main container">
+    <main class="clothing-main container lg-w-80">
 
-        <div class="clothing-top flex flex-column justify-between bg-white">
+        <div class="clothing-top flex flex-column justify-between">
 
             <div class="clothing-top-header">
 
@@ -246,18 +255,18 @@
             </div>
         </div>
 
-        <div class="clothing-grid container grid">
+        <div class="clothing-grid grid">
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/slide-1.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
+                            Brown Gown
                         </a>
 
                         <p>
@@ -284,14 +293,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/faq-image.png" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/slide-2.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
+                            White Sweater
                         </a>
 
                         <p>
@@ -310,74 +319,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/jogging-800.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/black-jacket.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
-                        </a>
-
-                        <p>
-                            D&G
-                        </p>
-
-                        <P>
-                            <span class="old-price">
-                                #50000
-                            </span>
-                            #25000
-                        </P>
-
-                    </div>
-
-                    <div class="discount-box bg-black flex place-center">
-                        50% <br>
-                        OFF
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="clothing-card">
-
-                <img class="clothing-image" src="assets/img/slideshow.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
-
-                <div class="clothing-card-text flex align-center justify-between">
-
-                    <div>
-
-                        <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
-                        </a>
-
-                        <p>
-                            D&G
-                        </p>
-
-                        <P>
-                            #25000
-                        </P>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="clothing-card">
-
-                <img class="clothing-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
-
-                <div class="clothing-card-text flex align-center justify-between">
-
-                    <div>
-
-                        <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
+                            Black Jacket
                         </a>
 
                         <p>
@@ -404,14 +353,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/faq-image.png" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
+                            Military Stripe Jacket
                         </a>
 
                         <p>
@@ -430,74 +379,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/jogging-800.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/60a4fa22ded29706e7024478_8.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
-                        </a>
-
-                        <p>
-                            D&G
-                        </p>
-
-                        <P>
-                            <span class="old-price">
-                                #50000
-                            </span>
-                            #25000
-                        </P>
-
-                    </div>
-
-                    <div class="discount-box bg-black flex place-center">
-                        50% <br>
-                        OFF
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="clothing-card">
-
-                <img class="clothing-image" src="assets/img/slideshow.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
-
-                <div class="clothing-card-text flex align-center justify-between">
-
-                    <div>
-
-                        <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
-                        </a>
-
-                        <p>
-                            D&G
-                        </p>
-
-                        <P>
-                            #25000
-                        </P>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="clothing-card">
-
-                <img class="clothing-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
-
-                <div class="clothing-card-text flex align-center justify-between">
-
-                    <div>
-
-                        <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
+                            Polo 1
                         </a>
 
                         <p>
@@ -524,14 +413,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/faq-image.png" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/60ab6ebee8e3aeb0600e4cb9_1.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
+                            Brown Polo
                         </a>
 
                         <p>
@@ -550,74 +439,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/jogging-800.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/60ae443ecc7ef26d1ac9f9ff_6.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
-                        </a>
-
-                        <p>
-                            D&G
-                        </p>
-
-                        <P>
-                            <span class="old-price">
-                                #50000
-                            </span>
-                            #25000
-                        </P>
-
-                    </div>
-
-                    <div class="discount-box bg-black flex place-center">
-                        50% <br>
-                        OFF
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="clothing-card">
-
-                <img class="clothing-image" src="assets/img/slideshow.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
-
-                <div class="clothing-card-text flex align-center justify-between">
-
-                    <div>
-
-                        <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
-                        </a>
-
-                        <p>
-                            D&G
-                        </p>
-
-                        <P>
-                            #25000
-                        </P>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="clothing-card">
-
-                <img class="clothing-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
-
-                <div class="clothing-card-text flex align-center justify-between">
-
-                    <div>
-
-                        <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
+                            Blue Jacket
                         </a>
 
                         <p>
@@ -644,14 +473,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/faq-image.png" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/slide-1.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
+                            Brown Gown
                         </a>
 
                         <p>
@@ -670,14 +499,14 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/jogging-800.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/slide-1.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Blue Sleeves Gown
+                            Brown Gown
                         </a>
 
                         <p>
@@ -704,14 +533,194 @@
 
             <div class="clothing-card">
 
-                <img class="clothing-image" src="assets/img/slideshow.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+                <img class="clothing-image" src="assets/img/slide-2.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
 
                 <div class="clothing-card-text flex align-center justify-between">
 
                     <div>
 
                         <a class="link" href="category-preview.html">
-                            Red Sleeves Gown
+                            White Sweater
+                        </a>
+
+                        <p>
+                            D&G
+                        </p>
+
+                        <P>
+                            #25000
+                        </P>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clothing-card">
+
+                <img class="clothing-image" src="assets/img/black-jacket.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+
+                <div class="clothing-card-text flex align-center justify-between">
+
+                    <div>
+
+                        <a class="link" href="category-preview.html">
+                            Black Jacket
+                        </a>
+
+                        <p>
+                            D&G
+                        </p>
+
+                        <P>
+                            <span class="old-price">
+                                #50000
+                            </span>
+                            #25000
+                        </P>
+
+                    </div>
+
+                    <div class="discount-box bg-black flex place-center">
+                        50% <br>
+                        OFF
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clothing-card">
+
+                <img class="clothing-image" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+
+                <div class="clothing-card-text flex align-center justify-between">
+
+                    <div>
+
+                        <a class="link" href="category-preview.html">
+                            Military Stripe Jacket
+                        </a>
+
+                        <p>
+                            D&G
+                        </p>
+
+                        <P>
+                            #25000
+                        </P>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clothing-card">
+
+                <img class="clothing-image" src="assets/img/60a4fa22ded29706e7024478_8.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+
+                <div class="clothing-card-text flex align-center justify-between">
+
+                    <div>
+
+                        <a class="link" href="category-preview.html">
+                            Polo 1
+                        </a>
+
+                        <p>
+                            D&G
+                        </p>
+
+                        <P>
+                            <span class="old-price">
+                                #50000
+                            </span>
+                            #25000
+                        </P>
+
+                    </div>
+
+                    <div class="discount-box bg-black flex place-center">
+                        50% <br>
+                        OFF
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clothing-card">
+
+                <img class="clothing-image" src="assets/img/60ab6ebee8e3aeb0600e4cb9_1.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+
+                <div class="clothing-card-text flex align-center justify-between">
+
+                    <div>
+
+                        <a class="link" href="category-preview.html">
+                            Brown Polo
+                        </a>
+
+                        <p>
+                            D&G
+                        </p>
+
+                        <P>
+                            #25000
+                        </P>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clothing-card">
+
+                <img class="clothing-image" src="assets/img/60ae443ecc7ef26d1ac9f9ff_6.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+
+                <div class="clothing-card-text flex align-center justify-between">
+
+                    <div>
+
+                        <a class="link" href="category-preview.html">
+                            Blue Jacket
+                        </a>
+
+                        <p>
+                            D&G
+                        </p>
+
+                        <P>
+                            <span class="old-price">
+                                #50000
+                            </span>
+                            #25000
+                        </P>
+
+                    </div>
+
+                    <div class="discount-box bg-black flex place-center">
+                        50% <br>
+                        OFF
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clothing-card">
+
+                <img class="clothing-image" src="assets/img/slide-1.jpg" loading="lazy" alt="Clothing Image" width="100%" height="350">
+
+                <div class="clothing-card-text flex align-center justify-between">
+
+                    <div>
+
+                        <a class="link" href="category-preview.html">
+                            Brown Gown
                         </a>
 
                         <p>
@@ -730,43 +739,35 @@
 
         </div>
 
-        <div class="clothing-pagination container flex">
+        <div class="clothing-pagination flex">
 
             <div class="clothing-pagination-links-container flex align-center">
 
-                <a class="clothing-pagination-link" href="" aria-label="Prev paginate button">
+                <a class="clothing-pagination-link black" href="" aria-label="Prev paginate button">
                     <i class="fr fi-rr-angle-left relative paginate-control"></i>
                 </a>
 
-                <a class="clothing-pagination-link" href="">
+                <a class="clothing-pagination-link black" href="">
                     1
                 </a>
 
-                <a class="clothing-pagination-link" href="">
+                <a class="clothing-pagination-link black active" href="">
                     2
                 </a>
 
-                <a class="clothing-pagination-link active" href="">
-                    3
-                </a>
-
-                <a class="clothing-pagination-link paginate-divider" href="">
+                <a class="clothing-pagination-link black paginate-divider" href="">
                     &bull; &bull; &bull;
                 </a>
 
-                <a class="clothing-pagination-link" href="">
-                    8
-                </a>
-
-                <a class="clothing-pagination-link" href="">
+                <a class="clothing-pagination-link black" href="">
                     9
                 </a>
 
-                <a class="clothing-pagination-link" href="">
+                <a class="clothing-pagination-link black" href="">
                     10
                 </a>
 
-                <a class="clothing-pagination-link" href="" aria-label="Next paginate button">
+                <a class="clothing-pagination-link black" href="" aria-label="Next paginate button">
                     <i class="fr fi-rr-angle-right relative paginate-control"></i>
                 </a>
 
@@ -774,7 +775,7 @@
 
         </div>
 
-        <div class="clothing-discount-advert container fashion-outfit-three relative">
+        <div class="clothing-discount-advert fashion-outfit-three relative">
 
             <div class="fashion-outfit-text-three absolute flex align-center justify-between">
 
@@ -797,7 +798,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-light-grey">
+    <footer>
 
         <div class="footer-container grid justify-between">
 
@@ -810,7 +811,7 @@
                 </h3>
 
                 <a class="footer-links link" href="">
-                    Sell with us
+                    Sell With Us
                 </a>
 
                 <a class="footer-links link" href="">
@@ -913,7 +914,7 @@
 
             <span>
                 Created with <i class="fr fi-rr-heart relative"></i>
-                by <a class="link" href="">Wisdom Ojimah</a>
+                by <a class="link" href="https://web.facebook.com/IamWisdomOjimah">Wisdom Ojimah</a>
             </span>
 
         </div>

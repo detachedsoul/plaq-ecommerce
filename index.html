@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
     <!-- Preload stylesheets and scripts -->
+    <link rel="preload" href="assets/css/preloader.css" as="style">
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="preload" href="assets/css/style.css" as="style">
     <link rel="preload" href="assets/css/fonts.css" as="style">
@@ -19,17 +20,26 @@
 
 
     <!-- Actual stylehseet -->
+    <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
 <body class="bg-white">
+
+    <div class="preloader-container fixed bg-white grid place-center">
+
+        <div class="preloader-content">
+            <img src="assets/img/preloader.gif" alt="Preloader">
+        </div>
+
+    </div>
 
     <!-- Header Section -->
     <header class="flex flex-column sticky bg-white">
 
         <div class="top-header flex justify-between align-center bg-white">
 
-            <form class="search-container absolute flex" action="search.html" method="GET">
+            <form class="search-container absolute flex" action="" method="get">
 
                 <input class="search-input input-focus bg-light-grey" type="text" placeholder="Search..." name="search">
 
@@ -43,12 +53,12 @@
 
             <div>
 
-                <a class="top-nav-link-icon" href="account.html" aria-label="Login to one's account">
+                <a class="top-nav-link-icon black" href="account.html" aria-label="Login to one's account">
                     <i class="fr fi-rr-users relative"></i>
                     Account
                 </a>
 
-                <a href="cart.html" aria-label="Check what is in cart">
+                <a class="black" href="cart.html" aria-label="Check what is in cart">
                     <i class="fr fi-rr-shopping-cart-check relative"></i>
                     Cart
                 </a>
@@ -57,11 +67,11 @@
 
         </div>
 
-        <div class="nav-content-container flex flex-column relative bg-light-grey">
+        <div class="nav-content-container flex flex-column relative bg-white">
 
             <div class="nav-togglers sticky flex align-center justify-between">
 
-                <a class="search-toggle" href="javascript:void(0)" aria-label="Search bar toggler">
+                <a class="search-toggle black" href="javascript:void(0)" aria-label="Search bar toggler">
                     <i class="fr fi-rr-search relative"></i>
                 </a>
 
@@ -78,36 +88,35 @@
                     <ul class="nav-links flex flex-column">
 
                         <li class="nav-item">
-                            <a class="nav-link active border-7 btn" href="index.html">
+                            <a class="nav-link active border-7" href="index.html">
                                 <i class="fr fi-rr-home relative nav-link-icon"></i>
                                 Home
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="clothing.html">
+                            <a class="nav-link border-7 black" href="clothing.html">
                                 <i class="fr fi-rr-portrait relative nav-link-icon"></i>
                                 Clothing
                             </a>
                         </li>
 
-
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="new-arrivals.html">
+                            <a class="nav-link border-7 black" href="new-arrivals.html">
                                 <i class="fr fi-rr-world relative nav-link-icon"></i>
                                 New Arrivals
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="dressers.html">
+                            <a class="nav-link border-7 black" href="dressers.html">
                                 <i class="fr fi-rr-camera relative nav-link-icon"></i>
                                 Dressers
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link border-7 btn" href="trending.html">
+                            <a class="nav-link border-7 black" href="trending.html">
                                 <i class="fr fi-rr-gallery relative nav-link-icon"></i>
                                 Trending
                             </a>
@@ -128,19 +137,19 @@
     <div class="slideshow-container flex relative bg-light-grey black">
 
         <div class="slideshow-content">
-            <img class="slideshow-image" src="assets/img/slide-1.png" loading="lazy" alt="Slide Image" width="100%" height="100%">
+            <img class="slideshow-image" src="assets/img/slide-1.jpg" loading="lazy" alt="Slide Image" width="100%" height="100%">
         </div>
 
         <div class="slideshow-content">
-            <img class="slideshow-image" src="assets/img/faq-image.png" loading="lazy" alt="Slide Image" width="100%" height="100%">
+            <img class="slideshow-image" src="assets/img/slide-2.jpg" loading="lazy" alt="Slide Image" width="100%" height="100%">
         </div>
 
         <div class="slideshow-content">
-            <img class="slideshow-image" src="assets/img/jogging-800.jpg" loading="lazy" alt="Slide Image" width="100%" height="100%">
+            <img class="slideshow-image" src="assets/img/slide-1.jpg" loading="lazy" alt="Slide Image" width="100%" height="100%">
         </div>
 
         <div class="slideshow-content">
-            <img class="slideshow-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Slide Image" width="100%" height="100%">
+            <img class="slideshow-image" src="assets/img/slide-2.jpg" loading="lazy" alt="Slide Image" width="100%" height="100%">
         </div>
 
         <div class="slide-indicator-container absolute flex">
@@ -154,10 +163,11 @@
 
     </div>
 
+
     <main>
 
         <!-- New Arrivals -->
-        <section class="new-arrivals container">
+        <section class="new-arrivals container lg-w-80">
 
             <h2 class="text-center header">
                 New Arrivals
@@ -169,11 +179,11 @@
 
                     <div>
                         <i class="fas fa-heart arrivals-heart absolute white"></i>
-                        <img class="arrivals-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="Arrivals" width="100%" height="350">
+                        <img class="arrivals-image border-1" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
                     </div>
 
                     <div class="transparent-white absolute text-center border-1 arrivals-add-to-cart">
-                        <a href="cart.html">
+                        <a class="black" href="cart.html">
                             ADD TO CART
                         </a>
                     </div>
@@ -203,11 +213,11 @@
 
                     <div>
                         <i class="fas fa-heart arrivals-heart absolute white"></i>
-                        <img class="arrivals-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
+                        <img class="arrivals-image border-1" src="assets/img/60a4fa22ded29706e7024478_8.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
                     </div>
 
                     <div class="transparent-white absolute text-center border-1 arrivals-add-to-cart">
-                        <a href="cart.html">
+                        <a class="black" href="cart.html">
                             ADD TO CART
                         </a>
                     </div>
@@ -237,11 +247,11 @@
 
                     <div>
                         <i class="fas fa-heart arrivals-heart absolute white"></i>
-                        <img class="arrivals-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
+                        <img class="arrivals-image border-1" src="assets/img/60ab6ebee8e3aeb0600e4cb9_1.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
                     </div>
 
                     <div class="transparent-white absolute text-center border-1 arrivals-add-to-cart">
-                        <a href="cart.html">
+                        <a class="black" href="cart.html">
                             ADD TO CART
                         </a>
                     </div>
@@ -271,11 +281,11 @@
 
                     <div>
                         <i class="fas fa-heart arrivals-heart absolute white"></i>
-                        <img class="arrivals-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="Arrivals" width="100%" height="350">
+                        <img class="arrivals-image border-1" src="assets/img/60ae443ecc7ef26d1ac9f9ff_6.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
                     </div>
 
                     <div class="transparent-white absolute text-center border-1 arrivals-add-to-cart">
-                        <a href="cart.html">
+                        <a class="black" href="cart.html">
                             ADD TO CART
                         </a>
                     </div>
@@ -305,11 +315,11 @@
 
                     <div>
                         <i class="fas fa-heart arrivals-heart absolute white"></i>
-                        <img class="arrivals-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
+                        <img class="arrivals-image border-1" src="assets/img/black-jacket.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
                     </div>
 
                     <div class="transparent-white absolute text-center border-1 arrivals-add-to-cart">
-                        <a href="cart.html">
+                        <a class="black" href="cart.html">
                             ADD TO CART
                         </a>
                     </div>
@@ -339,11 +349,11 @@
 
                     <div>
                         <i class="fas fa-heart arrivals-heart absolute white"></i>
-                        <img class="arrivals-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
+                        <img class="arrivals-image border-1" src="assets/img/slide-1.jpg" loading="lazy" alt="Arrivals" width="100%" height="350">
                     </div>
 
                     <div class="transparent-white absolute text-center border-1 arrivals-add-to-cart">
-                        <a href="cart.html">
+                        <a class="black" href="cart.html">
                             ADD TO CART
                         </a>
                     </div>
@@ -375,7 +385,7 @@
 
 
         <!-- What You May Like -->
-        <section class="what-you-may-like-container relative">
+        <section class="relative">
 
             <button class="what-you-like-btn absolute left active" aria-label="What you may like scroll buttons">
                 <i class="fi fi-rr-angle-left relative"></i>
@@ -385,7 +395,7 @@
                 <i class="fi fi-rr-angle-right relative"></i>
             </button>
 
-            <div class="what-you-like">
+            <div class="what-you-like lg-w-80">
 
                 <h2 class="text-center header">
                     What You May Like
@@ -395,11 +405,11 @@
 
                     <div class="what-you-like-card">
 
-                        <img class="what-you-may-like-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-1.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
                         
                         <p>
-                            <a href="clothing.html">
-                                Yellowish Orange Gown
+                            <a class="link" href="clothing.html">
+                                Brown Gown
                             </a>
                         </p>
 
@@ -407,10 +417,10 @@
 
                     <div class="what-you-like-card">
 
-                        <img class="what-you-may-like-image border-1" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        <img class="what-you-may-like-image border-1" src="assets/img/black-jacket.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
                         
                         <p>
-                            <a href="clothing.html">
+                            <a class="link" href="clothing.html">
                                 Black Leather Jacket
                             </a>
                         </p>
@@ -419,11 +429,11 @@
 
                     <div class="what-you-like-card">
 
-                        <img class="what-you-may-like-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="What you may like" width="100%" height="350">
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-2.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
                         
                         <p>
-                            <a href="clothing.html">
-                                White Animal Shirt
+                            <a class="link" href="clothing.html">
+                                White Sweater
                             </a>
                         </p>
 
@@ -431,11 +441,11 @@
 
                     <div class="what-you-like-card">
 
-                        <img class="what-you-may-like-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-1.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
                         
                         <p>
-                            <a href="clothing.html">
-                                Yellow Check Gown
+                            <a class="link" href="clothing.html">
+                                Brown Gown
                             </a>
                         </p>
 
@@ -443,22 +453,10 @@
 
                     <div class="what-you-like-card">
 
-                        <img class="what-you-may-like-image border-1" src="assets/img/slideshow.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
+                        <img class="what-you-may-like-image border-1" src="assets/img/black-jacket.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
                         
                         <p>
-                            <a href="clothing.html">
-                                Yellowish Orange Gown
-                            </a>
-                        </p>
-
-                    </div>
-
-                    <div class="what-you-like-card">
-
-                        <img class="what-you-may-like-image border-1" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" alt="What you may like" width="100%" height="350">
-                        
-                        <p>
-                            <a href="">
+                            <a class="link" href="clothing.html">
                                 Black Leather Jacket
                             </a>
                         </p>
@@ -467,23 +465,11 @@
 
                     <div class="what-you-like-card">
 
-                        <img class="what-you-may-like-image border-1" src="assets/img/faq-image.png" loading="lazy" alt="What you may like" width="100%" height="350">
+                        <img class="what-you-may-like-image border-1" src="assets/img/slide-2.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
                         
                         <p>
-                            <a href="clothing.html">
-                                White Animal Shirt
-                            </a>
-                        </p>
-
-                    </div>
-
-                    <div class="what-you-like-card">
-
-                        <img class="what-you-may-like-image border-1" src="assets/img/jogging-800.jpg" loading="lazy" alt="What you may like" width="100%" height="350">
-                        
-                        <p>
-                            <a href="clothing.html">
-                                Yellow Check Gown
+                            <a class="link" href="clothing.html">
+                                White Sweater
                             </a>
                         </p>
 
@@ -498,7 +484,7 @@
 
 
         <!-- Fashion Outfit -->
-        <section class="fashion-outfit container grid">
+        <section class="fashion-outfit container grid lg-w-80">
 
             <div class="fashion-outfit-one relative">
 
@@ -563,7 +549,7 @@
 
 
         <!-- Share Fashion With Plaq -->
-        <section class="share-fashion container">
+        <section class="share-fashion container lg-w-80">
 
             <h3 class="text-center header">
                 Share your fashion with #plaq.
@@ -574,13 +560,13 @@
 
             <div class="share-fashion-grid grid">
 
-                <img class="share-fashion-image" src="assets/img/faq-image.png" loading="lazy" alt="Share Fashion" width="100%" height="350">
+                <img class="share-fashion-image" src="assets/img/60ab6ebee8e3aeb0600e4cb9_1.jpg" loading="lazy" alt="Share Fashion" width="100%" height="350">
 
-                <img class="share-fashion-image" src="assets/img/jogging-800.jpg" loading="lazy" alt="Share Fashion" width="100%" height="350">
+                <img class="share-fashion-image" src="assets/img/60a4f967e6bc90331ec92437_3.jpg" loading="lazy" alt="Share Fashion" width="100%" height="350">
 
-                <img class="share-fashion-image" src="assets/img/slideshow.jpg" loading="lazy" alt="Share Fashion" width="100%" height="350">
+                <img class="share-fashion-image" src="assets/img/60a4fa22ded29706e7024478_8.jpg" loading="lazy" alt="Share Fashion" width="100%" height="350">
 
-                <img class="share-fashion-image" src="assets/img/122897147_787767158684970_9108500850034584037_n.jpg" loading="lazy" alt="Share Fashion" width="100%" height="350">
+                <img class="share-fashion-image" src="assets/img/black-jacket.jpg" loading="lazy" alt="Share Fashion" width="100%" height="350">
 
             </div>
 
@@ -588,7 +574,7 @@
 
 
         <!-- Service Features -->
-        <section class="service-features-grid container place-center grid">
+        <section class="service-features-grid container place-center grid lg-w-80">
 
             <div class="text-center">
 
@@ -644,7 +630,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-light-grey">
+    <footer>
 
         <div class="footer-container grid justify-between">
 
@@ -657,7 +643,7 @@
                 </h3>
 
                 <a class="footer-links link" href="">
-                    Sell with us
+                    Sell With Us
                 </a>
 
                 <a class="footer-links link" href="">
@@ -760,7 +746,7 @@
 
             <span>
                 Created with <i class="fr fi-rr-heart relative"></i>
-                by <a class="link" href="">Wisdom Ojimah</a>
+                by <a class="link" href="https://web.facebook.com/IamWisdomOjimah">Wisdom Ojimah</a>
             </span>
 
         </div>
